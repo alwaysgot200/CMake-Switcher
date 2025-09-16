@@ -1,4 +1,5 @@
 cmake代理工具说明：
+
 在windows上通过msys2+mingw64编译旧的c/c++开源项目时，如果能找到编译好的库固然能解决问题， 但现实情况是：找不到现成的库，得从代码编译，折腾人！
 这时经常遇到引用或者关联的项目中cmake版本要求很低，而当前系统中的cmake版本过高，冒然全局降级cmake后果更严重， 于是有了这个小工具。
 
@@ -9,13 +10,16 @@ cmake代理工具说明：
 
 这个 PowerShell 脚本作为一个功能完备的 cmake.exe 代理，它不仅能根据项目需求选择正确的 CMake 版本，还要能完美地模拟真实 cmake.exe 的行为，包括参数传递、输出、错误和退出码。
 
-原理： 根据cmakelist.txt中的要求的cmake的版本要求，进行切换
+原理： 
+
+根据cmakelist.txt中的要求的cmake的版本要求，进行切换
 cmake<3.5， 用cmake3.5.2
 3.5<=cmake<4.0 , 用cmake3.31.8
 cmake>=4.0, 用cmake4.1.1
 
 
 使用方法：
+
 a.以管理员模式运行Powershell，以下命令安装 ps12exe 模块：
 Install-Module ps12exe
 
@@ -53,7 +57,10 @@ Run 'cmake --help' for more information.
 
 大功告成！
 
-TODO: 可以将程序的下载做成自动化，在第一次执行时，即进行cmake的下载及解压。
+TODO: 
+
+可以将程序的下载做成自动化，在第一次执行时，即进行cmake的下载及解压。
+
 
 
 
